@@ -4,53 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Be My Valentine?</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+        
         body {
             text-align: center;
             font-family: 'Dancing Script', cursive;
-            background-color: #ffc0cb;
+            background-color: #ffdde1;
             padding: 50px;
         }
         .container {
             background: white;
-            padding: 20px;
+            padding: 30px;
             border-radius: 15px;
             display: inline-block;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
         }
         h1 {
-            font-size: 36px;
+            color: #d63384;
+            font-size: 32px;
         }
         .buttons {
             margin-top: 20px;
         }
         button {
-            padding: 12px 24px;
+            padding: 12px 25px;
             font-size: 18px;
             border: none;
             cursor: pointer;
             margin: 10px;
-            border-radius: 8px;
+            border-radius: 10px;
             transition: 0.3s;
         }
         .yes {
-            background-color: #ff69b4;
+            background-color: #ff85a2;
             color: white;
+        }
+        .yes:hover {
+            background-color: #ff4d6d;
         }
         .hell-yes {
-            background-color: #ff1493;
+            background-color: #ff4081;
             color: white;
         }
-        button:hover {
-            transform: scale(1.1);
+        .hell-yes:hover {
+            background-color: #d63384;
         }
         .hidden {
             display: none;
-        }
-        #celebration {
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
         }
     </style>
 </head>
@@ -63,20 +65,18 @@
         </div>
         <div id="celebration" class="hidden">
             <h2>YAY! 🎉🎊</h2>
-            <p>Best decision ever! 💖</p>
+            <p>Best decision ever! 💕</p>
         </div>
     </div>
     
     <script>
         function denyYes() {
-            alert("think again, MISSY!");
+            alert("Think again, MISSY!🔫");
         }
         
         function acceptHellYes() {
             document.querySelector('.buttons').style.display = 'none';
-            let celebration = document.getElementById('celebration');
-            celebration.classList.remove('hidden');
-            setTimeout(() => { celebration.style.opacity = '1'; }, 100);
+            document.getElementById('celebration').classList.remove('hidden');
         }
     </script>
 </body>
